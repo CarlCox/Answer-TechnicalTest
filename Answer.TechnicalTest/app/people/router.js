@@ -6,6 +6,7 @@ function (Marionette) {
     return Marionette.AppRouter.extend({
         appRoutes: {
             '': 'list',
+            'people': 'list',
             'edit/:id': 'edit'
         }
     });

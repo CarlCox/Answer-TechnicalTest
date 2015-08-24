@@ -10,7 +10,8 @@
             template: personview,
             events: {
                 'click [data-backbone]#cancel': 'cancel',
-                'click [data-backbone]#save': 'save'
+                'click [data-backbone]#save': 'save',
+                'click label': 'hidecheckbox'
             },
             cancel: function (e) {
                 e.preventDefault();
@@ -40,6 +41,10 @@
                 model.save().done(function () {
                     Backbone.history.navigate('', { trigger: true });
                 });
+            },
+            hidecheckbox: function(e) {
+                e.preventDefault();
+                $(e.currentTarget).parent().find('input[type="checkbox"]').toggle();
             }
         });
     });
