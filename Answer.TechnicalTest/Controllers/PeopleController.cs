@@ -81,6 +81,18 @@
 
         public IHttpActionResult Put(Models.Person model)
         {
+            var person = _personRepository.Get(model.Id);
+            if (person == null)
+            {
+                return NotFound();
+            }
+
+            person.IsAuthorised = model.IsAuthorised;
+            person.IsEnabled = model.IsEnabled;
+            person.Colours.Clear();
+            person.Colours = _colorRepository.GetAll().Where(x => model.Colours.Any(y => y.Id == x.ColourId && y.IsSelected)).ToList();
+            _personRepository.Save();
+
             return StatusCode(HttpStatusCode.NoContent);
         }
     }
