@@ -5,7 +5,8 @@ function (Marionette) {
 
     return Marionette.AppRouter.extend({
         appRoutes: {
-            '': 'list'
+            '': 'list',
+            'edit/:id': 'edit'
         }
     });
 });

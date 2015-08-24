@@ -1,8 +1,11 @@
 ﻿define(['marionette',
-    'people/list/person',
     'people/list/main',
-    'people/list/header'],
-function (Marionette, PeopleView, PeopleModel, HeadListView) {
+    'people/list/model',
+    'people/list/header',
+    'people/edit/main',
+    'people/edit/model',
+    'people/edit/header'],
+function (Marionette, PeopleView, PeopleModel, HeadListView, PersonEdit, PersonModel, HeadEditView) {
 
     'use strict';
 
@@ -22,6 +25,22 @@ function (Marionette, PeopleView, PeopleModel, HeadListView) {
             people.fetch().success(function () {
                 mainlayout.show(peopleView);
                 console.log(people);
+            });
+        },
+        edit: function(id) {
+            var person = new PersonModel({ id: id });
+            var personView = new PersonEdit({
+                model: person
+            });
+
+            var header = new HeadEditView({
+                model: person
+            });
+
+            var app = require('app');//need a better way of doing this.
+            person.fetch().success(function () {
+                app.header.show(header);
+                app.main.show(personView);
             });
         }
     });

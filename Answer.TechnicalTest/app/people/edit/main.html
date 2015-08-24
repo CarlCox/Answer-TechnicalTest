@@ -1,0 +1,28 @@
+﻿<form role="form">
+    <h4><strong>User Details</strong></h4>
+    <hr />
+
+    <div>
+        <input id="authorised" type="checkbox" {{#if isAuthorised}} checked {{/if}} name="authorised" />
+        <label for="authorised" style="font-weight: normal">Authorised</label>
+    </div>
+
+    <div>
+        <input id="enabled" type="checkbox" {{#if isEnabled}} checked {{/if}} name="enabled" />
+        <label for="enabled">Enabled</label>
+    </div>
+
+    <h4><strong>Favorite Colours</strong></h4>
+    <hr />
+
+    {{#each colours}}
+    <div class="colours">
+        <input id="{{name}}" type="checkbox" {{#if isSelected }} checked="enabled" {{/if}} data-id="{{id}}" />
+        <label for="{{name}}">{{name}}</label>
+    </div>
+    {{/each}}
+
+    <button id="save" data-backbone="" class="btn btn-success">Save Changes</button>
+    <button id="cancel" data-backbone="" class="btn btn-danger">Cancel</button>
+
+</form>
