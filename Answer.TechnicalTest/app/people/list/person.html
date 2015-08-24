@@ -1,5 +1,5 @@
 ﻿<td><a href="">{{fullName}}</a></td>
-<td >{{isPalindrome}}</td>
-<td >{{isAuthorised}}</td>
-<td >{{isEnabled}}</td>
+<td class="{{#if isPalindrome}}text-success{{else}}text-danger{{/if}}">{{#if isPalindrome}}yes{{else}}no{{/if}}</td>
+<td class="{{#if isAuthorised}}text-success{{else}}text-danger{{/if}}">{{#if isAuthorised}}yes{{else}}no{{/if}}</td>
+<td class="{{#if isEnabled}}text-success{{else}}text-danger{{/if}}">{{#if isEnabled}}yes{{else}}no{{/if}}</td>
 <td>{{colourText}}</td>

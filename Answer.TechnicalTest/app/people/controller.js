@@ -15,7 +15,7 @@ function (Marionette, PeopleView, PeopleModel, HeadListView) {
                 }),
                 headView = new HeadListView();
 
-            var app = require('app');
+            var app = require('app');//need a better way of doing this.
             app.header.show(headView);
             var mainlayout = app.main;
 
