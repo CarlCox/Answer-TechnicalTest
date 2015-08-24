@@ -51,7 +51,32 @@
 
         public IHttpActionResult Get(int id)
         {
-            return Ok();
+            var entityPerson = _personRepository.Get(id);
+            if (entityPerson == null)
+            {
+                return NotFound();
+            }
+
+            var entityColours = _colorRepository.GetAll();
+            var person = new Models.Person
+            {
+                FirstName = entityPerson.FirstName,
+                Id = entityPerson.PersonId,
+                IsAuthorised = entityPerson.IsAuthorised,
+                IsEnabled = entityPerson.IsEnabled,
+                IsValid = entityPerson.IsValid,
+                LastName = entityPerson.LastName,
+                Colours = entityColours
+                      .Select(c => new Models.Colour
+                      {
+                          Id = c.ColourId,
+                          IsEnabled = c.IsEnabled,
+                          Name = c.Name,
+                          IsSelected = entityPerson.Colours.Any(x => x.ColourId == c.ColourId)
+                      }).OrderByDescending(x => x.Id).ToList()
+            };
+
+            return Ok(person);
         }
 
         public IHttpActionResult Put(Models.Person model)
