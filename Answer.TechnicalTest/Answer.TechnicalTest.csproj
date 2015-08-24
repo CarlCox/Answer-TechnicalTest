@@ -95,7 +95,105 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\app.js" />
+    <Content Include="app\libs\.gitignore" />
+    <Content Include="app\libs\demo-build.html" />
+    <Content Include="app\libs\demo.html" />
+    <Content Include="app\libs\demo\app.build.js" />
+    <Content Include="app\libs\demo\main.js" />
+    <Content Include="app\libs\demo\require.js" />
+    <Content Include="app\libs\demo\styles\one.css" />
+    <Content Include="app\libs\demo\styles\two.css" />
+    <Content Include="app\libs\demo\template\helpers\myhelper.js" />
+    <Content Include="app\libs\demo\template\helpers\yeller.js" />
+    <Content Include="app\libs\hbs.js" />
+    <Content Include="app\libs\hbs\handlebars.js" />
+    <Content Include="app\libs\hbs\handlebars.runtime.js" />
+    <Content Include="app\libs\hbs\i18nprecompile.js" />
+    <Content Include="app\libs\hbs\json2.js" />
+    <Content Include="app\libs\hbs\underscore.js" />
+    <Content Include="app\libs\karma.conf.js" />
+    <Content Include="app\libs\r.js" />
+    <Content Include="app\libs\tests\spec\helpers.js" />
+    <Content Include="app\libs\tests\spec\main.js" />
+    <Content Include="app\libs\tests\spec\multiline.js" />
+    <Content Include="app\libs\tests\spec\partial.js" />
+    <Content Include="app\libs\tests\spec\partial_loaded.js" />
+    <Content Include="app\libs\tests\spec\partial_subdir.js" />
+    <Content Include="app\libs\tests\spec\sexpr_hash.js" />
+    <Content Include="app\libs\tests\spec\sexpr_param.js" />
+    <Content Include="app\libs\tests\spec\simple.js" />
+    <Content Include="app\libs\tests\templates\helpers\inner-helper.js" />
+    <Content Include="app\libs\tests\templates\helpers\outer-helper.js" />
+    <Content Include="app\libs\tests\templates\helpers\var-sub.js" />
+    <Content Include="app\libs\tests\test-main.js" />
+    <Content Include="app\libs\tests\test.html" />
+    <Content Include="app\main.js" />
+    <Content Include="app\people\controller.js" />
+    <Content Include="app\people\list\header.html" />
+    <Content Include="app\people\list\header.js" />
+    <Content Include="app\people\list\main.html" />
+    <Content Include="app\people\list\main.js" />
+    <Content Include="app\people\list\person.html" />
+    <Content Include="app\people\list\person.js" />
+    <Content Include="app\people\router.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="index.html" />
+    <Content Include="Scripts\backbone.js" />
+    <Content Include="Scripts\backbone.marionette.js" />
+    <Content Include="Scripts\backbone.marionette.min.js" />
+    <Content Include="Scripts\backbone.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="App_Readme\Handlebarsjs_README.md" />
+    <Content Include="App_Readme\Handlebarsjs_LICENSE" />
+    <Content Include="app\libs\build.sh" />
+    <Content Include="app\libs\demo\template\coolPartial.hbs" />
+    <Content Include="app\libs\demo\template\i18n\en_ca.json" />
+    <Content Include="app\libs\demo\template\i18n\en_us.json" />
+    <Content Include="app\libs\demo\template\one.hbs" />
+    <Content Include="app\libs\package.json" />
+    <Content Include="app\libs\README.md" />
+    <Content Include="app\libs\tests\templates\helpers.hbs" />
+    <Content Include="app\libs\tests\templates\multiline.hbs" />
+    <Content Include="app\libs\tests\templates\partial.hbs" />
+    <Content Include="app\libs\tests\templates\partials\_simple.hbs" />
+    <Content Include="app\libs\tests\templates\partial_fullpath.hbs" />
+    <Content Include="app\libs\tests\templates\partial_loaded.hbs" />
+    <Content Include="app\libs\tests\templates\partial_subdir.hbs" />
+    <Content Include="app\libs\tests\templates\sexpr_hash.hbs" />
+    <Content Include="app\libs\tests\templates\sexpr_params.hbs" />
+    <Content Include="app\libs\tests\templates\simple.hbs" />
+    <Content Include="app\libs\tests\templates\subdir\parent.hbs" />
+    <Content Include="app\libs\tests\templates\_partial.hbs" />
+    <Content Include="app\libs\tests\templates\_partial_loaded.hbs" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\handlebars.amd.js" />
+    <Content Include="Scripts\handlebars.amd.min.js" />
+    <Content Include="Scripts\handlebars.js" />
+    <Content Include="Scripts\handlebars.min.js" />
+    <Content Include="Scripts\handlebars.runtime.amd.js" />
+    <Content Include="Scripts\handlebars.runtime.amd.min.js" />
+    <Content Include="Scripts\handlebars.runtime.js" />
+    <Content Include="Scripts\handlebars.runtime.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
+    <Content Include="Scripts\text.js" />
+    <Content Include="Scripts\underscore.js" />
+    <Content Include="Scripts\underscore.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +209,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
